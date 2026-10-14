@@ -6,13 +6,21 @@
 #/* OSU FreePDK 45nm                               */
 #/**************************************************/
 # [MOD] Copy of the Lab 0 compile_dc.tcl. Every edited line is tagged [MOD].
-# [MOD] ORIGINAL single-cycle design (flip-flop memories).
+# [MOD] ORIGINAL single-cycle processor.
+# [MOD] The top level synthesized here is the PROCESSOR (mips), not top.
+# [MOD] Reason: imem's contents come only from $readmemh in an initial block,
+# [MOD] which synthesis ignores, so with top as the top level DC sees an
+# [MOD] all-zero ROM, ties memwrite to 0 and removes most of the processor
+# [MOD] (including the register file). With mips as the top level, instr and
+# [MOD] readdata are input ports, so all processor logic is kept. imem/dmem are
+# [MOD] outside this netlist; their delay is represented by the input/output
+# [MOD] delays below, and their area is reported separately.
 
 #/* All verilog files, separated by spaces         */
 set my_verilog_files [list ../../original/top.v ../../original/controller.v ../../original/datapath.v]   ;# [MOD]
 
 #/* Top-level Module                               */
-set my_toplevel   top                   ;# [MOD]
+set my_toplevel   mips                  ;# [MOD] processor only (see above)
 
 #/* The name of the clock pin. If no clock-pin     */
 #/* exists, pick anything                          */
@@ -48,27 +56,8 @@ elaborate $my_toplevel
 
 current_design $my_toplevel
 
-# [MOD] imem is a ROM whose contents come only from $readmemh, which DC ignores,
-# [MOD] so DC sees an all-zero ROM and deletes most of the processor (every
-# [MOD] instruction becomes a NOP). Removing the imem design makes it a black box
-# [MOD] with unknown outputs, so the processor logic is kept. imem area is then
-# [MOD] not counted (it has no real contents in synthesis anyway).
-remove_design imem                     ;# [MOD]
-
 link
 uniquify
-
-# [MOD] Map dmem to library cells FIRST. A dont_touch cell is never
-# [MOD] mapped by the later compile, so without this step it would stay as
-# [MOD] unmapped generic logic with zero area (RPT-7 "unmapped logic").
-current_design dmem                    ;# [MOD]
-compile -map_effort medium             ;# [MOD]
-current_design $my_toplevel            ;# [MOD]
-
-# [MOD] handout: keep imem / dmem from being optimized away
-set_dont_touch [get_cells "imem"]
-set_dont_touch [get_cells "dmem"]
-set_boundary_optimization [get_cells "dmem"] false   ;# [MOD]
 
 set my_period [expr 1000 / $my_clk_freq_MHz]
 
@@ -105,7 +94,7 @@ redirect timing.rep { report_timing }
 redirect cell.rep { report_cell }
 redirect power.rep { report_power }
 redirect area.rep { report_area }
-redirect area_hier.rep { report_area -hierarchy }   ;# [MOD] area per block (imem/dmem/rest)
+redirect area_hier.rep { report_area -hierarchy }   ;# [MOD] area per block
 redirect qor.rep { report_qor }                     ;# [MOD] summary: critical path length, slack, area
 
 quit
