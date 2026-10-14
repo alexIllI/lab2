@@ -10,14 +10,13 @@ Report : power
         -analysis_effort low
 Design : top
 Version: V-2023.12-SP5-1
-Date   : Wed Oct 14 02:56:56 2026
+Date   : Wed Oct 14 06:26:48 2026
 ****************************************
 
 
 Library(s) Used:
 
     gscl45nm (File: /usr/local2/cadence/NCSU/SRC/FreePDK45/osu_soc/lib/files/gscl45nm.db)
-    gtech (File: /usr/local2/synopsys/syn_2023.12-SP51/libraries/syn/gtech.db)
     SRAM_32x64_1rw_TT_1p1V_25C_lib (File: /usr/local2/COURSES/ADDV/LAB2/sram_32x64/SRAM_32x64_1rw.db)
 
 
@@ -44,7 +43,7 @@ i - Including register clock pin internal power
                          ---------
 Total Dynamic Power    =  21.9693 mW  (100%)
 
-Cell Leakage Power     = 163.4677 uW
+Cell Leakage Power     = 163.4695 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -54,9 +53,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             1.0961        7.8951e-03        4.5160e+03            1.1086  (   5.01%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network     18.1861            0.0000            0.0000           18.1861  (  82.17%)  i
-register           0.5130        4.1989e-02        9.1075e+04            0.6460  (   2.92%)
+register           0.5130        4.1995e-02        9.1075e+04            0.6460  (   2.92%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      1.0673            1.0569        6.7876e+04            2.1921  (   9.90%)
+combinational      1.0673            1.0569        6.7878e+04            2.1921  (   9.90%)
 --------------------------------------------------------------------------------------------------
 Total             20.8626 mW         1.1068 mW     1.6347e+05 nW        22.1328 mW
 1

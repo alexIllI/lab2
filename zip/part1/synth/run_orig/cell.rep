@@ -3,7 +3,7 @@
 Report : cell
 Design : top
 Version: V-2023.12-SP5-1
-Date   : Wed Oct 14 02:55:35 2026
+Date   : Wed Oct 14 06:25:36 2026
 ****************************************
 
 Attributes:
@@ -16,48 +16,20 @@ Attributes:
 
 Cell                      Reference       Library             Area  Attributes
 --------------------------------------------------------------------------------
-U1                        INVX2           gscl45nm        1.877200  
-U2                        INVX2           gscl45nm        1.877200  
-U3                        INVX2           gscl45nm        1.877200  
-U4                        INVX2           gscl45nm        1.877200  
-U5                        INVX2           gscl45nm        1.877200  
-U6                        INVX2           gscl45nm        1.877200  
-U7                        INVX2           gscl45nm        1.877200  
-U8                        INVX2           gscl45nm        1.877200  
-U9                        INVX2           gscl45nm        1.877200  
-U10                       INVX2           gscl45nm        1.877200  
-U11                       INVX2           gscl45nm        1.877200  
-U12                       INVX2           gscl45nm        1.877200  
-U13                       INVX2           gscl45nm        1.877200  
-U14                       INVX2           gscl45nm        1.877200  
-U16                       INVX2           gscl45nm        1.877200  
-U18                       INVX1           gscl45nm        1.407900  
-U908                      BUFX2           gscl45nm        2.346500  
-U2189                     NAND2X1         gscl45nm        1.877200  
-U2283                     BUFX2           gscl45nm        2.346500  
-U2300                     BUFX2           gscl45nm        2.346500  
-U2314                     BUFX2           gscl45nm        2.346500  
-U2996                     BUFX2           gscl45nm        2.346500  
-U3311                     INVX1           gscl45nm        1.407900  
-U3392                     INVX1           gscl45nm        1.407900  
-U4268                     INVX1           gscl45nm        1.407900  
-U4269                     XNOR2X1         gscl45nm        4.693000  
-U4270                     INVX1           gscl45nm        1.407900  
-U4271                     XNOR2X1         gscl45nm        4.693000  
-U4272                     INVX1           gscl45nm        1.407900  
-U4273                     XNOR2X1         gscl45nm        4.693000  
-U4274                     INVX1           gscl45nm        1.407900  
-U4278                     INVX1           gscl45nm        1.407900  
-U4537                     BUFX2           gscl45nm        2.346500  
-U7903                     XOR2X1          gscl45nm        4.693000  
-U7916                     NAND2X1         gscl45nm        1.877200  
-U7929                     NAND2X1         gscl45nm        1.877200  
-U7942                     NAND2X1         gscl45nm        1.877200  
-U7955                     NAND2X1         gscl45nm        1.877200  
-U7956                     XOR2X1          gscl45nm        4.693000  
-dmem                      dmem                            7568.870430
-                                                                    d, h, n, u
-imem                      imem                            0.000000  d, h, u
+U1                        AND2X2          gscl45nm        2.815800  
+U2                        AND2X1          gscl45nm        2.346500  
+U3                        AND2X1          gscl45nm        2.346500  
+U4                        AND2X1          gscl45nm        2.346500  
+U5                        INVX1           gscl45nm        1.407900  
+U6                        INVX1           gscl45nm        1.407900  
+U7                        XOR2X1          gscl45nm        4.693000  
+U8                        XOR2X1          gscl45nm        4.693000  
+U9                        XOR2X1          gscl45nm        4.693000  
+U10                       XOR2X1          gscl45nm        4.693000  
+U11                       XOR2X1          gscl45nm        4.693000  
+dmem                      dmem                            35587.018411
+                                                                    d, h, n
+imem                      imem                            0.000000  d, h
 mips/dp/pcreg/q_reg[2]    DFFSR           gscl45nm        10.324600 n
 mips/dp/pcreg/q_reg[3]    DFFSR           gscl45nm        10.324600 n
 mips/dp/pcreg/q_reg[4]    DFFSR           gscl45nm        10.324600 n
@@ -65,5 +37,5 @@ mips/dp/pcreg/q_reg[5]    DFFSR           gscl45nm        10.324600 n
 mips/dp/pcreg/q_reg[6]    DFFSR           gscl45nm        10.324600 n
 mips/dp/pcreg/q_reg[7]    DFFSR           gscl45nm        10.324600 n
 --------------------------------------------------------------------------------
-Total 47 cells                                            7717.169230
+Total 19 cells                                            35685.102111
 1

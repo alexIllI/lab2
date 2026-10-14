@@ -3,13 +3,12 @@
 Report : area
 Design : top
 Version: V-2023.12-SP5-1
-Date   : Wed Oct 14 02:56:56 2026
+Date   : Wed Oct 14 06:26:48 2026
 ****************************************
 
 Library(s) Used:
 
     gscl45nm (File: /usr/local2/cadence/NCSU/SRC/FreePDK45/osu_soc/lib/files/gscl45nm.db)
-    gtech (File: /usr/local2/synopsys/syn_2023.12-SP51/libraries/syn/gtech.db)
     SRAM_32x64_1rw_TT_1p1V_25C_lib (File: /usr/local2/COURSES/ADDV/LAB2/sram_32x64/SRAM_32x64_1rw.db)
 
 Number of ports:                         2266
@@ -21,14 +20,12 @@ Number of macros/black boxes:               2
 Number of buf/inv:                       2658
 Number of references:                       3
 
-Combinational area:              21133.517289
-Buf/Inv area:                     4128.432043
+Combinational area:              21134.925189
+Buf/Inv area:                     4129.839943
 Noncombinational area:           11876.105698
 Macro/Black Box area:            14645.611328
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 47655.234315
+Total cell area:                 47656.642215
 Total area:                 undefined
-
-Information: This design contains unmapped logic. (RPT-7)
 1

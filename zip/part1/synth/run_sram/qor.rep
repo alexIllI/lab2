@@ -3,7 +3,7 @@
 Report : qor
 Design : top
 Version: V-2023.12-SP5-1
-Date   : Wed Oct 14 02:56:56 2026
+Date   : Wed Oct 14 06:26:48 2026
 ****************************************
 
 
@@ -38,24 +38,24 @@ Date   : Wed Oct 14 02:56:56 2026
 
   Area
   -----------------------------------
-  Combinational Area:    21133.517289
+  Combinational Area:    21134.925189
   Noncombinational Area: 11876.105698
-  Buf/Inv Area:           4128.432043
+  Buf/Inv Area:           4129.839943
   Total Buffer Area:            37.54
-  Total Inverter Area:        4090.89
+  Total Inverter Area:        4092.30
   Macro/Black Box Area:  14645.611328
   Net Area:                  0.000000
   -----------------------------------
-  Cell Area:             47655.234315
-  Design Area:           47655.234315
+  Cell Area:             47656.642215
+  Design Area:           47656.642215
 
 
   Design Rules
   -----------------------------------
   Total Number of Nets:         10539
-  Nets With Violations:          2735
+  Nets With Violations:          2736
   Max Trans Violations:             7
-  Max Cap Violations:            2735
+  Max Cap Violations:            2736
   -----------------------------------
 
 
@@ -65,10 +65,10 @@ Date   : Wed Oct 14 02:56:56 2026
   -----------------------------------------
   Resource Sharing:                    0.28
   Logic Optimization:                  0.16
-  Mapping Optimization:                2.83
+  Mapping Optimization:                2.77
   -----------------------------------------
-  Overall Compile Time:                4.04
-  Overall Compile Wall Clock Time:     4.53
+  Overall Compile Time:                3.98
+  Overall Compile Wall Clock Time:     4.47
 
   --------------------------------------------------------------------
 

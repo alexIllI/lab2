@@ -3,7 +3,7 @@
 Report : cell
 Design : top
 Version: V-2023.12-SP5-1
-Date   : Wed Oct 14 02:56:55 2026
+Date   : Wed Oct 14 06:26:47 2026
 ****************************************
 
 Attributes:
@@ -16,12 +16,12 @@ Attributes:
 
 Cell                      Reference       Library             Area  Attributes
 --------------------------------------------------------------------------------
-dmem                      dmem                            7322.805664
-                                                                    b, d, h, u
+dmem                      dmem                            7324.213564
+                                                                    b, d, h
 imem                      imem                            7322.805664
                                                                     b, d, h
 mips                      mips                            33009.622987
                                                                     h, n
 --------------------------------------------------------------------------------
-Total 3 cells                                             47655.234315
+Total 3 cells                                             47656.642215
 1

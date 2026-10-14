@@ -51,9 +51,24 @@ current_design $my_toplevel
 link
 uniquify
 
+# [MOD] Map imem and dmem to library cells FIRST. A dont_touch cell is never
+# [MOD] mapped by the later compile, so without this step they would stay as
+# [MOD] unmapped generic logic with zero area (RPT-7 "unmapped logic").
+current_design imem                    ;# [MOD]
+compile -map_effort medium             ;# [MOD]
+current_design dmem                    ;# [MOD]
+compile -map_effort medium             ;# [MOD]
+current_design $my_toplevel            ;# [MOD]
+
 # [MOD] handout: keep imem / dmem from being optimized away
 set_dont_touch [get_cells "imem"]
 set_dont_touch [get_cells "dmem"]
+# [MOD] imem is loaded by $readmemh in an initial block, which DC ignores, so it
+# [MOD] looks like a constant all-zero ROM. dont_touch keeps the cell, but DC would
+# [MOD] still propagate those constants into mips and delete most of the processor
+# [MOD] (memwrite tied to 0). Disabling boundary optimization stops that.
+set_boundary_optimization [get_cells "imem"] false
+set_boundary_optimization [get_cells "dmem"] false
 
 set my_period [expr 1000 / $my_clk_freq_MHz]
 
