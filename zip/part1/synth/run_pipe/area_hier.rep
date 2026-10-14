@@ -3,30 +3,33 @@
 Report : area
 Design : top
 Version: V-2023.12-SP5-1
-Date   : Wed Oct 14 06:26:14 2026
+Date   : Wed Oct 14 06:36:17 2026
 ****************************************
 
 Library(s) Used:
 
     gscl45nm (File: /usr/local2/cadence/NCSU/SRC/FreePDK45/osu_soc/lib/files/gscl45nm.db)
+    gtech (File: /usr/local2/synopsys/syn_2023.12-SP51/libraries/syn/gtech.db)
 
-Number of ports:                          203
-Number of nets:                          9962
-Number of cells:                         9922
-Number of combinational cells:           7761
-Number of sequential cells:              2086
+Number of ports:                          274
+Number of nets:                         11737
+Number of cells:                        11691
+Number of combinational cells:           9311
+Number of sequential cells:              2194
 Number of macros/black boxes:               0
-Number of buf/inv:                       2846
-Number of references:                       8
+Number of buf/inv:                       3650
+Number of references:                      23
 
-Combinational area:              19292.922773
-Buf/Inv area:                     4142.041724
-Noncombinational area:           16731.483246
+Combinational area:              22386.079037
+Buf/Inv area:                     5359.405909
+Noncombinational area:           17846.540070
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 36024.406019
+Total cell area:                 40232.619107
 Total area:                 undefined
+
+Information: This design contains unmapped logic. (RPT-7)
 
 Hierarchical area distribution
 ------------------------------
@@ -35,11 +38,12 @@ Hierarchical area distribution
                                   -------------------  ------------------------------ 
 Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
                                   Total       Total    national    national    boxes   Design
---------------------------------  ----------  -------  ----------  ----------  ------  ---------
-top                               36024.4060    100.0     89.1670    392.3348  0.0000  top
-dmem                              35542.9042     98.7  19203.7558  16339.1484  0.0000  dmem
+--------------------------------  ----------  -------  ----------  ----------  ------  -----------------
+top                               40232.6191    100.0   3182.3233   1507.3916  0.0000  top
+dmem                              35542.9042     88.3  19203.7558  16339.1484  0.0000  dmem
 imem                                  0.0000      0.0      0.0000      0.0000  0.0000  imem
---------------------------------  ----------  -------  ----------  ----------  ------  ---------
-Total                                                  19292.9228  16731.4832  0.0000
+imem/C37                              0.0000      0.0      0.0000      0.0000  0.0000  top_MUX_OP_64_6_1
+--------------------------------  ----------  -------  ----------  ----------  ------  -----------------
+Total                                                  22386.0790  17846.5401  0.0000
 
 1

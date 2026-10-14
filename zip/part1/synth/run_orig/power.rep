@@ -8,13 +8,14 @@ Report : power
         -analysis_effort low
 Design : top
 Version: V-2023.12-SP5-1
-Date   : Wed Oct 14 06:25:36 2026
+Date   : Wed Oct 14 06:35:22 2026
 ****************************************
 
 
 Library(s) Used:
 
     gscl45nm (File: /usr/local2/cadence/NCSU/SRC/FreePDK45/osu_soc/lib/files/gscl45nm.db)
+    gtech (File: /usr/local2/synopsys/syn_2023.12-SP51/libraries/syn/gtech.db)
 
 
 Operating Conditions: typical   Library: gscl45nm
@@ -35,12 +36,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =  28.9760 mW  (100%)
-  Net Switching Power  =   9.7733 uW    (0%)
+  Cell Internal Power  =  28.9815 mW  (100%)
+  Net Switching Power  =  15.2576 uW    (0%)
                          ---------
-Total Dynamic Power    =  28.9857 mW  (100%)
+Total Dynamic Power    =  28.9967 mW  (100%)
 
-Cell Leakage Power     = 186.3230 uW
+Cell Leakage Power     = 186.5431 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -49,10 +50,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network     28.9443            0.0000            0.0000           28.9443  (  99.22%)  i
-register       2.6613e-02        5.1034e-03        1.1325e+05            0.1450  (   0.50%)
+clock_network     28.9443            0.0000            0.0000           28.9443  (  99.18%)  i
+register       2.6579e-02        9.0905e-04        1.1325e+05            0.1407  (   0.48%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  5.6696e-03        4.6699e-03        7.3078e+04        8.3417e-02  (   0.29%)
+combinational  1.1227e-02        1.4349e-02        7.3298e+04        9.8873e-02  (   0.34%)
 --------------------------------------------------------------------------------------------------
-Total             28.9766 mW     9.7733e-03 mW     1.8632e+05 nW        29.1726 mW
+Total             28.9821 mW     1.5258e-02 mW     1.8654e+05 nW        29.1839 mW
 1

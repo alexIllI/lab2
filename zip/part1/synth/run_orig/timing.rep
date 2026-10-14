@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : top
 Version: V-2023.12-SP5-1
-Date   : Wed Oct 14 06:25:36 2026
+Date   : Wed Oct 14 06:35:22 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -26,25 +26,30 @@ Wire Load Model Mode: top
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
   mips/dp/pcreg/q_reg[2]/CLK (DFFSR)       0.00 #     0.00 r
-  mips/dp/pcreg/q_reg[2]/Q (DFFSR)         0.13       0.13 r
-  U4/Y (AND2X1)                            0.06       0.19 r
-  U2/Y (AND2X1)                            0.06       0.25 r
-  U3/Y (AND2X1)                            0.05       0.30 r
-  U1/Y (AND2X2)                            0.04       0.34 r
-  U11/Y (XOR2X1)                           0.05       0.39 r
-  mips/dp/pcreg/q_reg[7]/D (DFFSR)         0.00       0.39 r
-  data arrival time                                   0.39
+  mips/dp/pcreg/q_reg[2]/Q (DFFSR)         0.11       0.11 r
+  U1307/Y (BUFX2)                          0.04       0.15 r
+  U3491/Y (AND2X1)                         0.05       0.20 r
+  U3452/Y (AND2X1)                         0.05       0.24 r
+  U3389/Y (AND2X1)                         0.05       0.29 r
+  U3341/Y (AND2X1)                         0.04       0.33 r
+  U3342/Y (INVX1)                          0.03       0.35 f
+  U8686/Y (XOR2X1)                         0.03       0.38 f
+  U19/Y (INVX2)                            0.02       0.40 r
+  U17/Y (INVX2)                            0.02       0.42 f
+  U13/Y (INVX2)                            0.01       0.43 r
+  mips/dp/pcreg/q_reg[7]/D (DFFSR)         0.00       0.43 r
+  data arrival time                                   0.43
 
   clock clk (rise edge)                    1.00       1.00
   clock network delay (ideal)              0.00       1.00
   mips/dp/pcreg/q_reg[7]/CLK (DFFSR)       0.00       1.00 r
-  library setup time                      -0.08       0.92
-  data required time                                  0.92
+  library setup time                      -0.07       0.93
+  data required time                                  0.93
   -----------------------------------------------------------
-  data required time                                  0.92
-  data arrival time                                  -0.39
+  data required time                                  0.93
+  data arrival time                                  -0.43
   -----------------------------------------------------------
-  slack (MET)                                         0.53
+  slack (MET)                                         0.50
 
 
 1
