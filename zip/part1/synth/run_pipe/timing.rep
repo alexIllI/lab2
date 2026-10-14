@@ -4,9 +4,9 @@ Report : timing
         -path full
         -delay max
         -max_paths 1
-Design : top
+Design : mips
 Version: V-2023.12-SP5-1
-Date   : Wed Oct 14 06:36:16 2026
+Date   : Wed Oct 14 06:53:09 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -14,62 +14,54 @@ Date   : Wed Oct 14 06:36:16 2026
 Operating Conditions: typical   Library: gscl45nm
 Wire Load Model Mode: top
 
-  Startpoint: mips/dp/alusrcE_reg/CLK
-              (internal path startpoint clocked by clk)
-  Endpoint: mips/dp/aluoutM_reg[31]
+  Startpoint: dp/rf/rf_reg[24][13]
+              (falling edge-triggered flip-flop clocked by clk)
+  Endpoint: dp/pcreg/q_reg[22]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
 
   Point                                    Incr       Path
   -----------------------------------------------------------
-  clock clk (rise edge)                    0.00       0.00
-  clock network delay (ideal)              0.00       0.00
-  input external delay                     0.00       0.00 r
-  mips/dp/alusrcE_reg/CLK (DFFSR)          0.00 #     0.00 r
-  mips/dp/alusrcE_reg/Q (DFFSR)            0.11       0.11 f
-  U3585/Y (INVX1)                          0.02       0.13 r
-  U4275/Y (INVX1)                          0.02       0.15 f
-  U3559/Y (INVX2)                          0.04       0.19 r
-  U3288/Y (INVX8)                          0.03       0.22 f
-  U830/Y (INVX1)                           0.03       0.25 r
-  U2579/Y (MUX2X1)                         0.04       0.30 f
-  U433/Y (INVX2)                           0.02       0.32 r
-  U8163/Y (AND2X2)                         0.03       0.35 r
-  U8164/Y (INVX1)                          0.02       0.37 f
-  U8553/Y (OAI21X1)                        0.04       0.41 r
-  U8172/Y (AND2X2)                         0.04       0.44 r
-  U8173/Y (INVX1)                          0.02       0.46 f
-  U8640/Y (NAND3X1)                        0.04       0.50 r
-  U5511/Y (NAND2X1)                        0.02       0.52 f
-  U8641/Y (OR2X2)                          0.05       0.57 f
-  U8860/Y (NAND2X1)                        0.02       0.59 r
-  U8861/Y (NAND3X1)                        0.02       0.61 f
-  U8862/Y (NAND2X1)                        0.02       0.63 r
-  U8917/Y (NAND3X1)                        0.02       0.65 f
-  U8981/Y (NAND3X1)                        0.04       0.69 r
-  U8982/Y (NAND3X1)                        0.02       0.71 f
-  U1305/Y (BUFX2)                          0.04       0.75 f
-  U9083/Y (NAND3X1)                        0.03       0.78 r
-  U9084/Y (NAND3X1)                        0.02       0.79 f
-  U9085/Y (OAI21X1)                        0.02       0.81 r
-  U5470/Y (INVX1)                          0.03       0.84 f
-  U9093/Y (NOR2X1)                         0.03       0.87 r
-  U3269/Y (MUX2X1)                         0.02       0.89 f
-  U9094/Y (NAND2X1)                        0.03       0.92 r
-  mips/dp/aluoutM_reg[31]/D (DFFSR)        0.00       0.92 r
-  data arrival time                                   0.92
+  clock clk (fall edge)                    0.50       0.50
+  clock network delay (ideal)              0.00       0.50
+  dp/rf/rf_reg[24][13]/CLK (DFFNEGX1)      0.00 #     0.50 f
+  dp/rf/rf_reg[24][13]/Q (DFFNEGX1)        0.08       0.58 f
+  U2647/Y (INVX1)                          0.01       0.58 r
+  U6570/Y (AOI22X1)                        0.02       0.61 f
+  U6572/Y (AND2X2)                         0.04       0.65 f
+  U6573/Y (NAND3X1)                        0.03       0.68 r
+  U6574/Y (OAI21X1)                        0.02       0.70 f
+  U2912/Y (OR2X2)                          0.05       0.75 f
+  U6606/Y (XNOR2X1)                        0.05       0.80 r
+  U6607/Y (NAND2X1)                        0.02       0.82 f
+  U6875/Y (NOR3X1)                         0.04       0.86 r
+  U9514/Y (AND2X2)                         0.03       0.89 r
+  U9513/Y (AND2X2)                         0.03       0.92 r
+  U9519/Y (AND2X2)                         0.03       0.96 r
+  U7756/Y (NAND3X1)                        0.01       0.97 f
+  U7805/Y (OAI21X1)                        0.04       1.01 r
+  U5513/Y (INVX1)                          0.03       1.04 f
+  U982/Y (INVX1)                           0.00       1.05 r
+  U9155/Y (NAND2X1)                        0.01       1.06 f
+  U3636/Y (INVX1)                          0.01       1.07 r
+  U1529/Y (INVX1)                          0.02       1.09 f
+  U1662/Y (INVX1)                          0.01       1.10 r
+  U9397/Y (NAND2X1)                        0.01       1.11 f
+  U9399/Y (NAND3X1)                        0.04       1.14 r
+  dp/pcreg/q_reg[22]/D (DFFSR)             0.00       1.14 r
+  data arrival time                                   1.14
 
   clock clk (rise edge)                    1.00       1.00
   clock network delay (ideal)              0.00       1.00
-  mips/dp/aluoutM_reg[31]/CLK (DFFSR)      0.00       1.00 r
+  dp/pcreg/q_reg[22]/CLK (DFFSR)           0.00       1.00 r
   library setup time                      -0.08       0.92
   data required time                                  0.92
   -----------------------------------------------------------
   data required time                                  0.92
-  data arrival time                                  -0.92
+  data arrival time                                  -1.14
   -----------------------------------------------------------
-  slack (VIOLATED: increase significant digits)       0.00
+  slack (VIOLATED)                                   -0.23
 
 
 1

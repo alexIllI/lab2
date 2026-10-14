@@ -1,33 +1,30 @@
  
 ****************************************
 Report : area
-Design : top
+Design : mips
 Version: V-2023.12-SP5-1
-Date   : Wed Oct 14 06:35:22 2026
+Date   : Wed Oct 14 06:52:21 2026
 ****************************************
 
 Library(s) Used:
 
     gscl45nm (File: /usr/local2/cadence/NCSU/SRC/FreePDK45/osu_soc/lib/files/gscl45nm.db)
-    gtech (File: /usr/local2/synopsys/syn_2023.12-SP51/libraries/syn/gtech.db)
 
-Number of ports:                          274
-Number of nets:                          9951
-Number of cells:                         9881
-Number of combinational cells:           7815
-Number of sequential cells:              2054
+Number of ports:                          163
+Number of nets:                         10187
+Number of cells:                        10123
+Number of combinational cells:           9069
+Number of sequential cells:              1022
 Number of macros/black boxes:               0
-Number of buf/inv:                       2882
-Number of references:                       9
+Number of buf/inv:                       3756
+Number of references:                      22
 
-Combinational area:              19343.607172
-Buf/Inv area:                     4146.734723
-Noncombinational area:           16401.096039
+Combinational area:              20846.775065
+Buf/Inv area:                     5844.662104
+Noncombinational area:            8224.013031
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 35744.703211
+Total cell area:                 29070.788096
 Total area:                 undefined
-
-Information: This design contains unmapped logic. (RPT-7)
 1
